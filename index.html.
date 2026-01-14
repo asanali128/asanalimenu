@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>testmenu</title>
-    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="css/style.css">
+
     <script>
         function toggle(id) {
             const el = document.getElementById(id);
@@ -116,3 +117,4 @@
 </section>
 </body>
 </html>
+

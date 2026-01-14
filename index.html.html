@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>testmenu</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function toggle(id) {
+            const el = document.getElementById(id);
+            el.style.display = el.style.display === "block" ? "none" : "block";
+        }
+        function ru() {
+            document.querySelectorAll('.ru').forEach(e=>e.style.display='block');
+            document.querySelectorAll('.kz').forEach(e=>e.style.display='none');
+        }
+        function kz() {
+            document.querySelectorAll('.ru').forEach(e=>e.style.display='none');
+            document.querySelectorAll('.kz').forEach(e=>e.style.display='block');
+        }
+    </script>
+</head>
+<body>
+
+<div class="lang-buttons">
+    <button onclick="ru()">RU</button>
+    <button onclick="kz()">KZ</button>
+</div>
+
+<h1 class="title ru">Меню ресторана</h1>
+<h1 class="title kz" style="display:none">Мейрамхана мәзірі</h1>
+
+<!-- ================= ГОРЯЧИЕ БЛЮДА ================= -->
+<section>
+<h2 class="ru">🔥 Горячие блюда</h2>
+<h2 class="kz" style="display:none">🔥 Ыстық тағамдар</h2>
+
+<div class="grid">
+<div class="card"><img src="https://avatars.mds.yandex.net/i?id=323a6499d3121303320490c9ac5ebc949b3c7587-10496758-images-thumbs&n=13"><h3 class="ru">Плов</h3><h3 class="kz" style="display:none">Плов</h3></div>
+<div class="card"><img src="https://avatars.mds.yandex.net/i?id=323a6499d3121303320490c9ac5ebc949b3c7587-10496758-images-thumbs&n=13"><h3 class="ru">Лагман</h3><h3 class="kz" style="display:none">Лагман</h3></div>
+<div class="card"><img src="https://avatars.mds.yandex.net/i?id=d56206fbf1cca88ce0ad542c1a10da544b492487-5359329-images-thumbs&n=13"><h3 class="ru">Манты</h3><h3 class="kz" style="display:none">Манты</h3></div>
+<div class="card"><img src="https://avatars.mds.yandex.net/i?id=0483c0ed188c398b254636be39b69c5ceac1bfb9-5221733-images-thumbs&n=13"><h3 class="ru">Пицца</h3><h3 class="kz" style="display:none">Пицца</h3></div>
+<div class="card"><img src="https://avatars.mds.yandex.net/i?id=34a90d902fbeddb1daab7ed2e248f274904126e8-4471989-images-thumbs&n=13"><h3 class="ru">Картошка фри</h3><h3 class="kz" style="display:none">Қытырлақ картоп</h3></div>
+<div class="card"><img src="https://avatars.mds.yandex.net/i?id=26408e918b8adf06703a15ce8e4e18aeb16d8c7a-12525508-images-thumbs&n=13"><h3 class="ru">Рыба на гриле</h3><h3 class="kz" style="display:none">Грильдегі балық</h3></div>
+</div>
+</section>
+
+<!-- ================= ХОЛОДНЫЕ БЛЮДА ================= -->
+<section>
+<h2 class="ru">🥗 Холодные блюда</h2>
+<h2 class="kz" style="display:none">🥗 Суық тағамдар</h2>
+
+<div class="grid">
+<div class="card"><img src="https://avatars.mds.yandex.net/i?id=a27de57cd885df86fed88f41f2ed0ee6-5232990-images-thumbs&n=13"><h3 class="ru">Салат Оливье</h3><h3 class="kz" style="display:none">Оливье салаты</h3></div>
+<div class="card"><img src="https://avatars.mds.yandex.net/i?id=07cb123a39f1c1375ee50ab59eef8559bcd0ab21-3966351-images-thumbs&n=13"><h3 class="ru">Салат Цезарь</h3><h3 class="kz" style="display:none">Цезарь салаты</h3></div>
+<div class="card"><img src="https://avatars.mds.yandex.net/i?id=572744deaacc93de4905963ad4d7789996488078-5008643-images-thumbs&n=13"><h3 class="ru">Греческий салат</h3><h3 class="kz" style="display:none">Грек салаты</h3></div>
+<div class="card"><img src="https://avatars.mds.yandex.net/i?id=19d6027dd9b1d8f26ff6cd8e6a6b594478687a3e-7662450-images-thumbs&n=13"><h3 class="ru">Овощная нарезка</h3><h3 class="kz" style="display:none">Көкөніс кесілгені</h3></div>
+<div class="card"><img src="https://avatars.mds.yandex.net/i?id=fa16381069bdb597de7b10340148f1c3e86aafa6-5242289-images-thumbs&n=13"><h3 class="ru">Мясная нарезка</h3><h3 class="kz" style="display:none">Ет кесінділері</h3></div>
+<div class="card"><img src="https://avatars.mds.yandex.net/i?id=864a2990b42e08ec86fd293b49f91c41c6c08e10-5879175-images-thumbs&n=13"><h3 class="ru">Сельдь под шубой</h3><h3 class="kz" style="display:none">Шуба астындағы сельдь</h3></div>
+</div>
+</section>
+
+<!-- ================= НАПИТКИ ================= -->
+<section>
+<h2 class="ru">🥤 Напитки</h2>
+<h2 class="kz" style="display:none">🥤 Сусындар</h2>
+
+<div class="drink ru" onclick="toggle('coffee')">☕ Кофе</div>
+<div class="drink kz" style="display:none" onclick="toggle('coffee')">☕ Кофе</div>
+<div id="coffee" class="submenu">
+    <p class="ru">Эспрессо</p>
+    <p class="ru">Американо</p>
+    <p class="ru">Капучино</p>
+    <p class="ru">Латте</p>
+    <p class="kz" style="display:none">Эспрессо</p>
+    <p class="kz" style="display:none">Американо</p>
+    <p class="kz" style="display:none">Капучино</p>
+    <p class="kz" style="display:none">Латте</p>
+</div>
+
+<div class="drink ru" onclick="toggle('lemonade')">🍋 Лимонады</div>
+<div class="drink kz" style="display:none" onclick="toggle('lemonade')">🍋 Лимонадтар</div>
+<div id="lemonade" class="submenu">
+    <p class="ru">Лимонный лимонад</p>
+    <p class="ru">Манго лимонад</p>
+    <p class="ru">Клубничный лимонад</p>
+    <p class="ru">Апельсиновый лимонад</p>
+    <p class="ru">Мятный лимонад</p>
+    <p class="ru">Ягодный лимонад</p>
+
+    <p class="kz" style="display:none">Лимон лимонады</p>
+    <p class="kz" style="display:none">Манго лимонады</p>
+    <p class="kz" style="display:none">Құлпынай лимонады</p>
+    <p class="kz" style="display:none">Апельсин лимонады</p>
+    <p class="kz" style="display:none">Жасыл жалбыз лимонады</p>
+    <p class="kz" style="display:none">Жеміс лимонады</p>
+</div>
+
+<div class="drink ru" onclick="toggle('juice')">🧃 Соки</div>
+<div class="drink kz" style="display:none" onclick="toggle('juice')">🧃 Шырындар</div>
+<div id="juice" class="submenu">
+    <p class="ru">Апельсиновый</p>
+    <p class="ru">Яблочный</p>
+    <p class="ru">Вишневый</p>
+    <p class="ru">Ананасовый</p>
+    <p class="kz" style="display:none">Апельсин шырын</p>
+    <p class="kz" style="display:none">Алма шырын</p>
+    <p class="kz" style="display:none">Қызыл жидек шырын</p>
+    <p class="kz" style="https://avatars.mds.yandex.net/i?id=2e96c14f3b19d4aa6249db9e454e8e09ac52e3b3-12822362-images-thumbs&n=13">Ананас шырын</p>
+</div>
+
+<div class="drink simple ru">🥛 Компот</div>
+<div class="drink simple kz" style="display:none">🥛 Компот</div>
+<div class="drink simple ru">💧 Вода</div>
+<div class="drink simple kz" style="display:none">💧 Су</div>
+
+</section>
+</body>
+</html>
